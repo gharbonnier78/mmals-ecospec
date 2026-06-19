@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "MMALS EcoSpec 1.0: A Minimal Systemic Architecture for Goal-Conditioned, Memory-Preserving Adaptive Learning"
+message: "If you use this design specification or reference implementation, please cite it."
+type: software
+authors:
+  - family-names: Harbonnier
+    given-names: Guillaume
+version: 1.0.0
+date-released: 2026-06-14
+license: Apache-2.0

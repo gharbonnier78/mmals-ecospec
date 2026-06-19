@@ -1,0 +1,21 @@
+version: "1.0.0"
+controller:
+  mode: deterministic_energy
+  temperature: 0.25
+  abstain_when_no_admissible_route: true
+complexity:
+  fast_entropy_max: 0.45
+  critical_entropy_min: 0.95
+  critical_drift_min: 0.60
+  critical_risk_min: 0.60
+memory:
+  reconstructive_enabled: true
+  synthetic_compilation_enabled: true
+  min_evidence: 10
+  max_estimated_regret: 0.05
+  max_drift: 0.20
+extensions:
+  rl_enabled: false
+  forward_backward_enabled: false
+  information_geometry_enabled: false
+  density_state_enabled: false

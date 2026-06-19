@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/mmals-ecospec/trace.schema.json",
+  "title": "MMALS EcoSpec Trace Record",
+  "type": "object",
+  "required": [
+    "trace_id",
+    "step",
+    "goal",
+    "complexity_mode",
+    "context",
+    "candidate_ids",
+    "energy",
+    "selected_route_id",
+    "abstained",
+    "violations",
+    "metadata"
+  ],
+  "properties": {
+    "trace_id": {"type": "string", "minLength": 1},
+    "step": {"type": "integer", "minimum": 0},
+    "goal": {
+      "type": "object",
+      "required": ["accuracy", "retention", "cost", "stability", "specialization"],
+      "additionalProperties": false,
+      "properties": {
+        "accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+        "retention": {"type": "number", "minimum": 0, "maximum": 1},
+        "cost": {"type": "number", "minimum": 0, "maximum": 1},
+        "stability": {"type": "number", "minimum": 0, "maximum": 1},
+        "specialization": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "complexity_mode": {"enum": ["fast", "ambiguous", "critical"]},
+    "context": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "candidate_ids": {"type": "array", "items": {"type": "string"}},
+    "energy": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    },
+    "selected_route_id": {"type": ["string", "null"]},
+    "abstained": {"type": "boolean"},
+    "violations": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "items": {"type": "string"}}
+    },
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}
