@@ -6,6 +6,12 @@ This GitHub-ready package turns the MMALS TPUT design into an implementable cont
 
 > Use the simplest representation and control mechanism that preserves the information required for correct, stable, economical, and auditable action.
 
+<p align="center">
+  <a href="./paper/main.pdf">
+    <img src="https://img.shields.io/badge/Open-Article-0B5FFF?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Open PDF">
+  </a>
+</p>
+
 ## Deliverables
 
 - `paper/main.tex` — full arXiv-style conceptual and mathematical specification.
